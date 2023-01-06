@@ -1,4 +1,4 @@
-package com.revature.POProject1Remake.Services;
+package com.revature.POProject1Remake.repositories;
 
 import com.revature.POProject1Remake.models.Reimbursement;
 import com.revature.POProject1Remake.models.Status;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ReimbursementServices extends JpaRepository<Reimbursement, Integer> {
+public interface ReimbursementRepository extends JpaRepository<Reimbursement, Integer> {
     List<Reimbursement> findById(int id);
     List<Reimbursement> findByStatus(Status status);
     List<Reimbursement> findByAmount(int amount);
